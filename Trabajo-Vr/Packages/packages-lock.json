@@ -280,6 +280,15 @@
       },
       "url": "https://registry.npmjs.org"
     },
+    "io.extendreality.tilia.input.combinedactions.unity": {
+      "version": "2.0.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "io.extendreality.zinnia.unity": "2.0.0"
+      },
+      "url": "https://registry.npmjs.org"
+    },
     "io.extendreality.tilia.input.unityinputmanager": {
       "version": "2.0.4",
       "depth": 0,
@@ -300,11 +309,23 @@
       "url": "https://registry.npmjs.org"
     },
     "io.extendreality.tilia.interactions.interactables.unity": {
-      "version": "2.7.1",
+      "version": "2.10.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "io.extendreality.zinnia.unity": "2.4.0"
+        "io.extendreality.zinnia.unity": "2.6.0"
+      },
+      "url": "https://registry.npmjs.org"
+    },
+    "io.extendreality.tilia.interactions.pointerinteractors.unity": {
+      "version": "2.0.5",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "io.extendreality.zinnia.unity": "2.0.0",
+        "io.extendreality.tilia.utilities.shaders.unity": "1.3.0",
+        "io.extendreality.tilia.indicators.objectpointers.unity": "2.0.3",
+        "io.extendreality.tilia.interactions.interactables.unity": "2.0.1"
       },
       "url": "https://registry.npmjs.org"
     },
@@ -359,6 +380,18 @@
       },
       "url": "https://registry.npmjs.org"
     },
+    "io.extendreality.tilia.unityui": {
+      "version": "https://github.com/studentutu/Tilia.UnityUI.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "io.extendreality.zinnia.unity": "2.0.0",
+        "io.extendreality.tilia.interactions.interactables.unity": "2.0.1",
+        "io.extendreality.tilia.interactions.pointerinteractors.unity": "2.0.5",
+        "io.extendreality.tilia.input.combinedactions.unity": "2.0.1"
+      },
+      "hash": "e448c2bd02000da88caffa12c8275245d8061d77"
+    },
     "io.extendreality.tilia.utilities.shaders.unity": {
       "version": "1.3.1",
       "depth": 1,
@@ -366,8 +399,18 @@
       "dependencies": {},
       "url": "https://registry.npmjs.org"
     },
+    "io.extendreality.tilia.visuals.interactablehighlighter.unity": {
+      "version": "2.1.14",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "io.extendreality.zinnia.unity": "2.6.0",
+        "io.extendreality.tilia.interactions.interactables.unity": "2.10.0"
+      },
+      "url": "https://registry.npmjs.org"
+    },
     "io.extendreality.zinnia.unity": {
-      "version": "2.4.0",
+      "version": "2.6.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {},

@@ -5,9 +5,13 @@ using UnityEngine;
 public class FusibleCorrecto : MonoBehaviour
 {
     
+    
     public Renderer checkFusible;
+    public Material materialFusible;
+    
     public void ChangeMaterial()
     {
-        GetComponent<Renderer>().material.color = Color.green;
+        checkFusible.material = materialFusible;
+        Debug.Log("Hola si funciono amigo");
     }
 }

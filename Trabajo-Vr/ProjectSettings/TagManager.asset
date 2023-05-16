@@ -8,6 +8,7 @@ TagManager:
   - Cuerda
   - Oxigeno
   - BolaCorrecta
+  - Fusible
   layers:
   - Default
   - TransparentFX

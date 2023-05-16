@@ -13,5 +13,6 @@ public class FusibleCorrecto : MonoBehaviour
     {
         checkFusible.material = materialFusible;
         Debug.Log("Hola si funciono amigo");
+        Reto1FusiblesManager.instance.fusiblesConectados++;   
     }
 }

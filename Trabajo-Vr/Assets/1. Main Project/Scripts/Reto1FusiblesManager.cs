@@ -17,6 +17,11 @@ public class Reto1FusiblesManager : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+      OpenDoors();
+    }
+
     private void Update()
     {
         if (fusiblesConectados == 3)

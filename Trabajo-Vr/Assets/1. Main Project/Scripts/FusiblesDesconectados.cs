@@ -16,7 +16,7 @@ public class FusiblesDesconectados : MonoBehaviour
             checkFusible.material = materialFusible;
             Debug.Log("Fusible DESCONECTADO");
             Reto1FusiblesManager.instance.fusiblesDesconectados++;
-            other.GetComponent<BoxCollider>().enabled = false;
+            ///other.GetComponent<BoxCollider>().enabled = false;
         }
     }
 }

@@ -16,19 +16,27 @@ public class SpawnProjectilew : MonoBehaviour
     public GameObject firepoint;
 
     [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private ParticleSystem charge;
+    [SerializeField] private ParticleSystem shot;
+
+    public changecolor color;
 
 
     public void booleanacton()
     {
         isShooting = true;
-        currentChargeTime = 0.0f;
-        Debug.Log("Cargando, tiempo:" + currentChargeTime);
+        Debug.Log("Cargando");
+        charge.Play();
+        color.ChangeColorShot();
     }
     
     public void booleanactoff()
     {
+        color.ResetColor();
         isShooting = false;
         Debug.Log("Disparo cancelado");
+        charge.Clear();
+        currentChargeTime = 0.0f;
     }
 
     
@@ -37,12 +45,10 @@ public class SpawnProjectilew : MonoBehaviour
         if (isShooting)
         {
             currentChargeTime += Time.deltaTime;
-
             if (currentChargeTime >= chargeTime && !isCharged)
             {
                 isCharged = true;
                 spawnVfx();
-                Debug.Log("disparao");
                 isShooting = false;
             }
         }
@@ -53,7 +59,12 @@ public class SpawnProjectilew : MonoBehaviour
 
         if (firepoint != null)
         {
-            GameObject projectile = Instantiate(projectilePrefab, firepoint.transform.position, quaternion.identity);
+            GameObject projectile = Instantiate(projectilePrefab, firepoint.transform.position, firepoint.transform.rotation);
+            Debug.Log("disparao");
+            currentChargeTime = 0.0f;
+            isCharged = false;
+            shot.Play();
+            color.ResetColor();
         }
         else
         {

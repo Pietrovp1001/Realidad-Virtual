@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class ControlPuertaGases : MonoBehaviour
 {
-    [SerializeField] private Transform[] puertas;
-    Vector3 offset = new Vector3(2, 0, 0); 
-    public int completedGas = 0;
+    [SerializeField] private GameObject leftDoor, rightDoor;
+    public int[] completedGas;
 
     void Update() {
-        if (completedGas >= 3) {
-            OpenDoors();
-            completedGas = 0;
+        for (int i = 0; i < completedGas.Length; i++) {
+            if (completedGas[i] == 0) {
+                break;
+            } else {
+                OpenDoors();
+                for (int j = 0; j < completedGas.Length; j++) {
+                    completedGas[j] = 0;
+                }
+            }
         }
     }
 
     private void OpenDoors() {
-        puertas[0].position -= offset;
-        puertas[1].position += offset;
+        LeanTween.moveLocalX(leftDoor, 28.5f, 2f).setEaseInSine();
+        LeanTween.moveLocalX(rightDoor, 34.5f, 2f).setEaseInSine();
     }
 }

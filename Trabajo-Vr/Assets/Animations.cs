@@ -23,6 +23,14 @@ public class Animations : MonoBehaviour
         coroutine = AlienReady();
     }
 
+
+    public void armita()
+    {
+        Puertaentrada1.SetTrigger("Cerrado");
+        Puertaentrada2.SetTrigger("Cerrado2");
+    }
+
+
     public void botondeentrada()
     {
         Puertaentrada1.SetTrigger("Abierto");

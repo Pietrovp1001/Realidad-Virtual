@@ -19,7 +19,7 @@ public class Reto1FusiblesManager : MonoBehaviour
 
     private void Start()
     {
-      OpenDoors();
+      //OpenDoors();
     }
 
     private void Update()

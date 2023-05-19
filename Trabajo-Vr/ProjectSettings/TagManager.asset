@@ -9,6 +9,7 @@ TagManager:
   - Oxigeno
   - BolaCorrecta
   - Fusible
+  - Bullet
   layers:
   - Default
   - TransparentFX

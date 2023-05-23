@@ -11,6 +11,7 @@ public class ButtonsSequence : MonoBehaviour
         public float lightDuration = 2f; 
         public GameObject capsule;
         public Material materialCapsule;
+        public GameObject colliders;
     
         private bool isCheckingSequence = false; 
         
@@ -60,6 +61,7 @@ public class ButtonsSequence : MonoBehaviour
         {
             Debug.Log("Secuencia correcta");
             LeanTween.value(materialCapsule.color.a, 0f, 1f).setEaseInSine().setOnComplete(HideCapsule);
+            colliders.SetActive(true);
         }
         
         void ShowError()

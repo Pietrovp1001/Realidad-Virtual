@@ -7,11 +7,13 @@ public class ControlOxigeno : MonoBehaviour
     ControlPuertaGases controlPuertaGases;
     private int[] angleValue = {0, 28, 54, 84, 114};
 
-    void Start() {
+    void Start() 
+    {
         controlPuertaGases = GameObject.FindGameObjectWithTag("Oxigeno").GetComponent<ControlPuertaGases>();
     }
 
-    public void SetOxigenValue(float value) {
+    public void SetOxigenValue(float value)
+    {
         for (int i = 0; i < angleValue.Length; i++) {
             if (value == 0) {
                 transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
@@ -23,7 +25,7 @@ public class ControlOxigeno : MonoBehaviour
         }
 
         if (gasLevel == value) {
-            controlPuertaGases.completedGas[gasIndex]++;
+            controlPuertaGases.oxigenCompleted = true;
         }
     }
 }

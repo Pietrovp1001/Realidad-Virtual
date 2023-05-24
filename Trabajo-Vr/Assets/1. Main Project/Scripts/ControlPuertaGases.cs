@@ -6,21 +6,20 @@ public class ControlPuertaGases : MonoBehaviour
 {
     [SerializeField] private GameObject leftDoor, rightDoor;
     public int[] completedGas;
+    public bool oxigenCompleted, nitrogenCompleted, carbonoCompleted;
+    public bool puertaAbierta = false;
 
-    void Update() {
-        for (int i = 0; i < completedGas.Length; i++) {
-            if (completedGas[i] == 0) {
-                break;
-            } else {
-                OpenDoors();
-                for (int j = 0; j < completedGas.Length; j++) {
-                    completedGas[j] = 0;
-                }
-            }
-        }
-    }
+    void Update()
+     {
+         if (oxigenCompleted && nitrogenCompleted && carbonoCompleted && puertaAbierta)
+         {
+             OpenDoors();
+         }
+     }
 
-    private void OpenDoors() {
+    private void OpenDoors() 
+    {
+        puertaAbierta = true;
         LeanTween.moveLocalX(leftDoor, 28.5f, 2f).setEaseInSine();
         LeanTween.moveLocalX(rightDoor, 34.5f, 2f).setEaseInSine();
     }
